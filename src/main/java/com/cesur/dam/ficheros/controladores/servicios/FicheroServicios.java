@@ -155,13 +155,13 @@ public class FicheroServicios {
 			
 			mapafichero.put(nombres,new Fichero(nombres,esdirectorio,rutaabs));
 			
-			
+
 		}
-		
+
 		return mapafichero;
 	}
-	
-	
+
+
 }
 
 
