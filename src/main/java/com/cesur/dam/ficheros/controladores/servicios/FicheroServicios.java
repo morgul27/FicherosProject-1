@@ -133,7 +133,7 @@ public class FicheroServicios {
 		
 		return mapafichero;
 	}
-	
+	/*
 	@ResponseBody
 	@GetMapping("RellenarFichero")
 	public HashMap <String, ArrayList<Fichero>> RellenarFichero(String nombre) {
@@ -160,7 +160,7 @@ public class FicheroServicios {
 
 		return mapafichero;
 	}
-
+	 */
 
 }
 
