@@ -3,6 +3,7 @@ package com.cesur.dam.ficheros.controladores.servicios.ejercicios;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class LeerFicheroLinea {
 
@@ -14,7 +15,8 @@ public class LeerFicheroLinea {
 		try {
 		FileReader fr = new FileReader (preguntas);
 		BufferedReader br = new BufferedReader(fr);
-		//InputReader ir = new InputReader(br);
+		ArrayList<Pregunta> listasP = new ArrayList<Pregunta>();
+ 	    ArrayList<Respuesta> listasR = new ArrayList <Respuesta>();
 		
 		
 		 // Lectura del fichero
@@ -22,7 +24,12 @@ public class LeerFicheroLinea {
         while((linea=br.readLine())!=null) {
            System.out.println(linea);
            l = linea.charAt(0);
-           if(l == 'f') {
+           if(l == '+') {
+        	listasP.add();
+        	   
+           }else if(l == '*') {
+        	   
+           }else {
         	   
            }
         }
