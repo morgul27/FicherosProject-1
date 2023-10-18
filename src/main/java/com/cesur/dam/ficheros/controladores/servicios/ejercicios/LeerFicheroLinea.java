@@ -34,6 +34,12 @@ public class LeerFicheroLinea {
         	   
            }else{
         	   //p.respuesta(new listaresp,mult o no)
+        	   if(l == '-') {
+        		   
+        	   }else{
+        		   
+        		   
+        	   }
         	   
            }
         }
