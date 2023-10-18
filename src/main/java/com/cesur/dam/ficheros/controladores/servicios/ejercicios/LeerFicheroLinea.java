@@ -16,7 +16,7 @@ public class LeerFicheroLinea {
 		FileReader fr = new FileReader (preguntas);
 		BufferedReader br = new BufferedReader(fr);
 		Pregunta listasP = new Pregunta();
-		Respuesta listasR = new Respuesta();
+		ArrayList<String> respuestas = new ArrayList <String>();
 		
 		
 		 // Lectura del fichero
@@ -25,9 +25,10 @@ public class LeerFicheroLinea {
            System.out.println(linea);
            l = linea.charAt(0);
            if(l == '+') {
-        	   listasP.preguntas.add(linea);
+        	   listasP.setPreguntas(linea);
            }else if(l == '-') {
-        	   listasP.preguntas.add(listasP.respuestas.getRespuestas(linea));
+        	   respuestas.add(linea);
+        	   listasP.setPreguntas(listasP.respuestas.add(respuestas));
         	   
            }else if(l == '*'){
         	   
