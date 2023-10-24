@@ -1,14 +1,12 @@
-package com.cesur.dam.ficheros.controladores.servicios.ejercicios;
+package com.cesur.dam.ficheros.controladores.servicios.ejercicios.leerfichero;
 
 import java.util.ArrayList;
 
 public class Pregunta {
 	protected String preguntas;
-	protected ArrayList<Respuesta> respuestas = new ArrayList <Respuesta>();
+	protected ArrayList<Respuesta> respuestas;
 	protected boolean multiple;
 	
-	
-
 	
 	
 	public String getPreguntas() {
@@ -42,8 +40,23 @@ public class Pregunta {
 		// TODO Auto-generated constructor stub
 		
 	}
-
 	
+	@Override
+	public String toString() {
+		
+	    StringBuilder result = new StringBuilder();
+	    result.append("Pregunta: " + preguntas + "\n");
+	    result.append("Es pregunta de opción múltiple: " + multiple + "\n");
+	    result.append("Respuestas:\n");
+	    
+	    for (Respuesta respuesta : respuestas) {
+	        result.append(respuesta.toString());
+	    }
+	    
+	    result.append("\n");
+	    return result.toString();
+
+	}
 }
 
 

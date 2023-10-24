@@ -1,4 +1,4 @@
-package com.cesur.dam.ficheros.controladores.servicios.ejercicios;
+package com.cesur.dam.ficheros.controladores.servicios.ejercicios.leerfichero;
 
 
 public class Respuesta {
@@ -33,5 +33,11 @@ public class Respuesta {
 			
 	}
 
+	public String toString() {
+		
+	   
+	    return this.respuestas+" "+ this.correcta+"\n";
+
+	}
 	
 }

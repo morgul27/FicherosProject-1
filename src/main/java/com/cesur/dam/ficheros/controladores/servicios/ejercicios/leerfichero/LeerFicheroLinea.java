@@ -1,4 +1,4 @@
-package com.cesur.dam.ficheros.controladores.servicios.ejercicios;
+package com.cesur.dam.ficheros.controladores.servicios.ejercicios.leerfichero;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,48 +15,39 @@ public class LeerFicheroLinea {
 		try {
 		FileReader fr = new FileReader (preguntas);
 		BufferedReader br = new BufferedReader(fr);
-		Pregunta listasP = new Pregunta();
-		ArrayList<String> listaresp = new ArrayList <String>();
+		
+		
+		ArrayList<Pregunta> listasP = new ArrayList <Pregunta>();
+		ArrayList<Respuesta> listasResp = new ArrayList <Respuesta>();
+		Pregunta p = null;
 
 
 		 // Lectura del fichero
         String linea;
         while((linea=br.readLine())!=null) {
-           System.out.println(linea);
            l = linea.charAt(0);
+           
            if(l == '+' || l == '*') {
-        	   if(l == '+') {
-        		   //p.pregunta(new pregunta,mult o no)
-        	   }else{
-        		   listasP.setPreguntas(linea);
-        		   
-        	   }
+        	   p = new Pregunta();
+    		   p.setPreguntas(linea);
+        	   p.setMultiple(linea.startsWith("*"));
+        	   p.setRespuestas(new ArrayList<Respuesta>());
+        	   listasP.add(p);
         	   
            }else{
-        	   //p.respuesta(new listaresp,mult o no)
-        	   if(l == '-') {
-        		   
-        	   }else{
-        		   
-        		   
-        	   }
-        	   
+        	   Respuesta resp = new Respuesta();
+    		   resp.setRespuestas(linea);
+    		   resp.setCorrecta(linea.startsWith("-"));
+        	   p.getRespuestas().add(resp);
            }
         }
         
-        
-        
-        
-        
-        
         fr.close();
 
+        System.out.println(listasP);
 		}catch(Exception e){ 
             e.printStackTrace();
         }
-		
-		
-		
 	}
 
 }
