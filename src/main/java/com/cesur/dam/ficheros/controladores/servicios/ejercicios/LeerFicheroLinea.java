@@ -17,8 +17,8 @@ public class LeerFicheroLinea {
 		BufferedReader br = new BufferedReader(fr);
 		Pregunta listasP = new Pregunta();
 		ArrayList<String> listaresp = new ArrayList <String>();
-		
-		
+
+
 		 // Lectura del fichero
         String linea;
         while((linea=br.readLine())!=null) {
