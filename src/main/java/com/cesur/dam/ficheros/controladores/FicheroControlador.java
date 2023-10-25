@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cesur.dam.ficheros.controladores.servicios.FicheroServicios;
-import com.cesur.dam.ficheros.controladores.servicios.ficheros.Fichero;
+import com.cesur.dam.ficheros.controladores.servicios.ejercicios.ficheros.Fichero;
 
 @Controller
 public class FicheroControlador {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.cesur.dam.ficheros.controladores.servicios.ficheros.Fichero;
+import com.cesur.dam.ficheros.controladores.servicios.ejercicios.ficheros.Fichero;
 
 @Service
 public class FicheroServicios {
